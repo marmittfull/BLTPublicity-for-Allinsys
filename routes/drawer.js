@@ -57,7 +57,9 @@ function CustomDrawerContent(props) {
             style={{width: 80, height: 60}}
           />
         </View>
-        <DrawerItemList {...props} />
+        //DrawerItemList representa todas as rotas contidas dentro do menu drawer, por padrão elas recebem alguns estilos que vem através do {...props},
+        //portanto, para retirar o destaque de background é só colocar ao lado das props activeBackgroundColor={null} que isso irá sobrepor o estilo padrão.
+        <DrawerItemList {...props} activeBackgroundColor={null}  />
       </DrawerContentScrollView>
 
       <View style={styles.footer}>
